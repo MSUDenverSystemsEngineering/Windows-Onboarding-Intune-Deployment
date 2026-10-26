@@ -1,0 +1,2 @@
+﻿$p = Get-AppxProvisionedPackage -Online | Where-Object { $_.DisplayName -eq '04B47220-D789-41BD-8405-197514C17B5B' -and [version]$_.Version -ge [version]'1.0.0.1' }
+if ($p) { Write-Output 'Installed'; exit 0 }
